@@ -27,7 +27,7 @@ default: &default
 
 development:
   <<: *default
-  database: foodie_server_development
+  database: <YOUR PROJECT NAME>_server_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -61,7 +61,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: foodie_server_test
+  database: <YOUR PROJECT NAME>_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,6 +85,6 @@ test:
 #
 production:
   <<: *default
-  database: foodie_server_production
+  database: <YOUR PROJECT NAME>_server_production
   username: server
   password: <%= ENV["SERVER_DATABASE_PASSWORD"] %>

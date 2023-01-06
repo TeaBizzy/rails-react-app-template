@@ -69,6 +69,18 @@
     # For details on connection pooling, see Rails configuration guide
     # https://guides.rubyonrails.org/configuring.html#database-pooling
     pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+    development:
+        <<: *default
+        database: <YOUR PROJECT NAME>_server_development # Add your project name here
+
+    test:
+        <<: *default
+        database: <YOUR PROJECT NAME>_server_test # Add your project name here
+
+    production:
+        <<: *default
+        database: <YOUR PROJECT NAME>_server_production # Add your project name here
     ```
 
 6. Create, migrate, and seed the database.
